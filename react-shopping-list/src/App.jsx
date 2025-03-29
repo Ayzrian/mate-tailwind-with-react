@@ -38,17 +38,20 @@ function App() {
         <em>Shoppping List App</em>
       </Header>
 
-      <ShoppingListForm onSubmit={handleSubmit} />
+      <div className="container mx-auto p-2">
+        <ShoppingListForm onSubmit={handleSubmit} />
 
-      <br/>
-      <ShoppingListPanel
-        mustHaveFilter={mustHaveFilter}
-        onMustHaveFilterChange={setMustHaveFilter}
-        onSortByChange={setSortBy}
-      />
-      <br/>
+        <br/>
+        <ShoppingListPanel
+          mustHaveFilter={mustHaveFilter}
+          onMustHaveFilterChange={setMustHaveFilter}
+          onSortByChange={setSortBy}
+        />
 
-      <ShoppingList list={list} onItemDelete={handleItemDelete}/>
+        <div className="divider"/>
+
+        <ShoppingList list={list} onItemDelete={handleItemDelete}/>
+      </div>
     </>
   )
 }

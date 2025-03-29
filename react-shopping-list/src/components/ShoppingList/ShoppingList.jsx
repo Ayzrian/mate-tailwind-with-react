@@ -1,5 +1,4 @@
 import { ShoppingListItem } from "../ShoppingListItem/ShoppingListItem";
-import "./ShoppingList.scss"
 
 export function ShoppingList({ list, onItemDelete }) {
     if (list.length === 0) {
@@ -9,7 +8,7 @@ export function ShoppingList({ list, onItemDelete }) {
     }
 
     return (
-        <ul className="ShoppingList">
+        <ul className="space-y-2">
             {
                 list.map((item) => <ShoppingListItem key={item.id} item={item} onItemDelete={onItemDelete}/> )
             }

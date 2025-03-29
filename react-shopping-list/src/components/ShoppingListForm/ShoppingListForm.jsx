@@ -20,12 +20,12 @@ export function ShoppingListForm({ onSubmit }) {
         setName("")
     }
 
-    return (<div>
-        <input value={name} onChange={handleChange} type="text" placeholder="Input an item name"/>
-        <button onClick={handleCreateClick}>
+    return (<div className="flex items-center justify-center gap-2">
+        <input className="input" value={name} onChange={handleChange} type="text" placeholder="Input an item name"/>
+        <button className="btn btn-primary" onClick={handleCreateClick}>
             Create
         </button>
-        <button onClick={handleX3Click}>
+        <button className="btn btn-primary" onClick={handleX3Click}>
             X3
         </button>
     </div>)
